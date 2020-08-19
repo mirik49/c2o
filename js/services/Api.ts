@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASIC_AUTH = "Bearer 772f583d-a2ea-4458-a5b0-3556fdd5bb94";
+const BASIC_AUTH = "";
 let DS_WEBSERVICES;
 switch (process.env.NODE_ENV) {
     case "development":
