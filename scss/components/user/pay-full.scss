@@ -1,0 +1,41 @@
+@import "../base/mixins";
+
+.pay-full-form {
+  &__input-text-wrapper {
+    margin-bottom: $baseIndent;
+  }
+  &-input-error {
+    @include myriadBold;
+    color: red;
+    font-size: 11px;
+  }
+  @include flexCenter;
+  &__wrapper {
+    @include formWrapper;
+  }
+
+  &__title {
+
+    @include blockTitle;
+  }
+
+  &__input {
+    &-text {
+      @include inputText;
+    }
+  }
+
+  &__text-wrapper {
+    @include inputText;
+  }
+
+  &__button {
+    @include baseBtn;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    &-back {
+      @include backBtn;
+    }
+  }
+}

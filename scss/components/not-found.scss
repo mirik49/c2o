@@ -1,0 +1,8 @@
+@import "/base/mixins";
+.not-found {
+  @include smallPages;
+  &__text {
+    color: red;
+    background-color: rgba(252,66,45,.3);
+  }
+}

@@ -1,0 +1,25 @@
+@import "../base/global";
+@import "../base/variables";
+@import "../base/mixins";
+
+.user-action {
+  padding: 0 20px;
+  &__wrapper {
+    @include flexCenter;
+    //padding: 0 20px;
+    flex-direction: column;
+    @include formWrapper;
+  }
+  &__button {
+    @include mainBtn;
+    width: 100%;
+  }
+}
+
+@media(min-width: $maxWidth) {
+  .user-action {
+    &__button {
+      @include changeSize;
+    }
+  }
+}

@@ -1,0 +1,46 @@
+@import "../base/global";
+@import "../base/variables";
+@import "../base/mixins";
+
+.user-data {
+  @include flexCenter;
+  margin: 20px 0;
+
+  &__data {
+    text-align: center;
+    @include myriadRegular;
+    font-size: 14px;
+    line-height: 18px;
+
+    &-dec-bold {
+      @include myriadBold;
+      font-size: 14px;
+      line-height: 18px;
+      text-transform: uppercase;
+    }
+
+    &-sum {
+      @include myriadBold;
+      color: $fontBlue;
+      font-size: 24px;
+    }
+  }
+  &__expired {
+    @include myriadRegular;
+    font-size: 14px;
+    &--bold {
+      @include myriadBold;
+      font-size: 18px;
+    }
+  }
+
+  &__rouble {
+    @include rouble;
+    font-size: 24px;
+    color: #015293;
+    &--black {
+      color: $black;
+      font-size: 14px;
+    }
+  }
+}

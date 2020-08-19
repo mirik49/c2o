@@ -1,0 +1,33 @@
+@import "../base/global";
+@import "../base/variables";
+@import "../base/mixins";
+
+.user-payment {
+  @include flexCenter;
+  //padding: 0 20px;
+  &__wrapper {
+    @include flexCenter;
+    @include formWrapper;
+  }
+  &__button {
+    &:nth-of-type(2) {
+      background-color: #c7d9e5;
+    }
+    @include mainBtn;
+    display: block;
+    &-back {
+      @include backBtn;
+    }
+  }
+  &__title {
+    @include blockTitle;
+  }
+}
+
+@media(min-width: $maxWidth) {
+  .user-payment {
+    &__button {
+      @include changeSize;
+    }
+  }
+}

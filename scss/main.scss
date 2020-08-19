@@ -1,0 +1,18 @@
+@import "./components/header";
+@import "./components/footer";
+@import "./components/loan-payed";
+@import "./components/preloader";
+@import "./components/department/city";
+@import "./components/department/department";
+@import "./components/department/departments";
+@import "./components/department/region";
+@import "./components/user/user-data";
+@import "./components/user/user-action";
+@import "./components/user/user-payment";
+@import "./components/user/prolong-form";
+@import "./components/user/refuse";
+@import "./components/user/pay-full";
+
+.main {
+  padding: 0 20px;
+}

@@ -1,0 +1,8 @@
+@import "/base/mixins";
+.service {
+  @include smallPages;
+  &__text {
+    @include myriadBold;
+    font-size: 32px;
+  }
+}

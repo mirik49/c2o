@@ -1,0 +1,19 @@
+@import "./base/mixins";
+
+.offer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__btn {
+    @include baseBtn;
+
+    &--back {
+
+      @include backBtn;
+      background: none;
+      margin-right: 20px;
+
+    }
+  }
+}

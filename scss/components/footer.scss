@@ -1,0 +1,24 @@
+@import "./base/global";
+@import "./base/variables";
+@import "./base/mixins";
+.footer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    &-text {
+      @include myriadRegular;
+      text-align: center;
+      position: relative;
+      text-transform: uppercase;
+      color: $black;
+    }
+  }
+}

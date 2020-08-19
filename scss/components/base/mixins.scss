@@ -1,0 +1,142 @@
+@import "./variables";
+@import "fonts";
+
+@mixin flexCenter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin myriadRegular {
+  font-family: "MyriadPro-Regular", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 100;
+  letter-spacing: 0.01em;
+  color: $black;
+}
+
+@mixin myriadBold {
+  font-family: "MyriadPro-Bold", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 100;
+  letter-spacing: 0.01em;
+  color: $black;
+}
+
+@mixin rouble {
+  font-family: "Rouble", sans-serif;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 100;
+  letter-spacing: 0.01em;
+  color: $black;
+}
+
+@mixin blockTitle {
+  @include myriadBold;
+  margin: 0;
+  text-align: center;
+  font-size: 20px;
+}
+
+@mixin formWrapper {
+  margin-top: 10px;
+  width: 100%;
+  @media(min-width: $maxWidth) {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+}
+
+@mixin changeSize {
+  width: calc(50% - 10px);
+  &:nth-child(2n) {
+    margin-left: $baseIndent;
+    margin-bottom: $baseIndent;
+  }
+}
+
+@mixin baseBtn {
+  @include myriadRegular;
+  cursor: pointer;
+  border-radius: 50px;
+  background-color: $btnYellow;
+  border: none;
+  padding: 10px 10px;
+  min-width: 120px;
+  margin-bottom: $baseIndent;
+  font-size: 14px;
+  line-height: 16px;
+  outline: none;
+  text-align: center;
+  &:disabled {
+    background-color: #f8f8f8;
+    cursor: not-allowed;
+  }
+}
+
+@mixin outlineNone {
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+@mixin mainBtn {
+  @include baseBtn;
+  width: 100%;
+  @include outlineNone;
+
+  &--bottom {
+    background-color: $colorBlue;
+  }
+}
+
+@mixin backBtn {
+  @include outlineNone;
+  @include baseBtn;
+  background: none;
+  border: 2px solid $colorBlue;
+  padding: 10px $baseIndent;
+}
+
+@mixin inputText {
+  &::-webkit-input-placeholder {
+    @include myriadBold;
+    color: #999999;
+    font-size: 15px;
+  }
+
+  width: 100%;
+  border: 2px solid $colorBlue;
+  padding: 10px;
+  background-color: #f8f8f8;
+
+  @media(min-width: $maxWidth) {
+    &-wrapper {
+      @include changeSize;
+    }
+  }
+}
+
+@mixin smallPages {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  //padding: 0 20px;
+  &__wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 30px 0;
+  }
+  &__text {
+    background-color: #ecf7dd;
+    color: #7ead4b;
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+  }
+}

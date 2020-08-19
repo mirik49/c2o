@@ -1,0 +1,147 @@
+@import "../base/mixins";
+
+.prolong-form {
+  @include flexCenter;
+
+  &__wrapper {
+    @include formWrapper;
+  }
+
+  &__input {
+    //&-text {
+    //  @include inputText;
+    //}
+
+    &-checkbox {
+      display: none;
+
+      &-wrapper {
+        padding-left: 40px;
+        margin-bottom: 20px;
+      }
+
+      &-label {
+        position: relative;
+        @include myriadRegular;
+        font-size: 11px;
+        line-height: 11px !important;
+
+        & a {
+          color: $fontBlue;
+          text-decoration: underline;
+        }
+
+        &::after,
+        &::before {
+          position: absolute;
+          content: "";
+        }
+
+        &::before {
+          width: 20px;
+          height: 20px;
+          left: -40px;
+          top: 0;
+          border: 2px solid $fontBlue;
+        }
+      }
+
+      &:checked + &-label {
+        &::before {
+          background-color: $btnYellow;
+          border: none;
+        }
+
+        & span {
+          &::after,
+          &::before {
+            position: absolute;
+            content: "";
+            width: 12px;
+            height: 1.2px;
+            background-color: $black;
+          }
+
+          &::before {
+            transform: rotate(45deg);
+            left: -37px;
+            width: 5px;
+            top: 11px;;
+          }
+
+          &::after {
+            transform: rotate(-45deg);
+            left: -35px;
+            top: 9.2px;
+          }
+        }
+      }
+    }
+  }
+
+  &__title {
+    text-align: center;
+    @include myriadBold;
+    font-size: 20px;
+  }
+
+  &__button {
+    @include baseBtn;
+    //width: 150px;
+    &-back {
+      @include backBtn;
+    }
+  }
+
+  &__data {
+    &-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &-item {
+      display: flex;
+    }
+
+    &-val {
+      @include myriadRegular;
+      font-size: 14px;
+    }
+
+    &-data {
+      @include myriadBold;
+      font-size: 14px;
+
+      &--rouble {
+        @include rouble;
+        font-size: 14px;
+      }
+    }
+  }
+
+  &__summary {
+    display: flex;
+    flex-direction: column;
+
+    &-val {
+      @include myriadRegular;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    &-data {
+      @include myriadBold;
+      color: $fontBlue;
+      font-size: 24px;
+      text-align: center;
+      &--rouble {
+        font-family: "Rouble", sans-serif;
+      }
+    }
+  }
+
+}

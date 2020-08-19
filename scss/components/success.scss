@@ -1,0 +1,8 @@
+@import "/base/mixins";
+.success {
+  @include smallPages;
+  &__text {
+    background-color: #ecf7dd;
+    color: #7ead4b;
+  }
+}
